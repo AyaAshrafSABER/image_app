@@ -9,6 +9,12 @@
   </head>
 
   <body>
+
+            <% if user_signed_in? %>
+            <p>HELLO</p>
+            <%= current_user.user_name %>
+            <%= link_to "sign_out" ,destroy_user_session_path , :method => 'delete' %>\
+            <% end %>
     <%= yield %>
   </body>
 </html>

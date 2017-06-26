@@ -1,4 +1,5 @@
 class ImagePostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_image_post, only: [:show, :edit, :update, :destroy]
 
   # GET /image_posts
